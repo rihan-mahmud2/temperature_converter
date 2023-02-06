@@ -3,7 +3,7 @@ export function toCelcius(fahrenheit) {
 }
 
 export function toFahrenheit(celcius) {
-  return (celcius * 5) / 9 + 32;
+  return (celcius * 9) / 5 + 32;
 }
 
 export function convert(temperature, convertTo) {
@@ -12,6 +12,7 @@ export function convert(temperature, convertTo) {
     return "";
   }
   const output = convertTo(input);
-  const rounded = Math.random(output * 1000) / 1000;
+
+  const rounded = Math.round(output * 1000) / 1000;
   return rounded.toString();
 }
